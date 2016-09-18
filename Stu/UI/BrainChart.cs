@@ -13,6 +13,7 @@ using Stu.Class;
 using Stu.Utils;
 using System.Diagnostics;
 using System.Threading;
+using Stu.Manager;
 
 namespace Stu.UI
 {
@@ -27,8 +28,9 @@ namespace Stu.UI
         private ArrayList attDataes = null;
         private ArrayList resDataes = null;
         private ArrayList resTitleDataes = null;
+        private ConfigManager configManager = null;
         private int colorIndex;
-        public BrainChart(string path,Boolean show_csv , Boolean saveCheck)
+        public BrainChart(string path, Boolean show_csv, Boolean saveCheck, ConfigManager manager)
         {
             InitializeComponent();
             this.outPath = path;
@@ -49,6 +51,15 @@ namespace Stu.UI
             if (saveCheck)
             {
                 Thread.Sleep(5000);
+            }
+            if (manager != null)
+            {
+                ageText.Text = "年紀：" + manager.getYear();
+                nameText.Text = "受試者：" + manager.getName();
+                orderIDText.Text = "資料夾ID：" + manager.getOrderID();
+                BluetoothDeviceManager deviceManager = manager.getDeviceManager();
+                labelMac.Text = deviceManager.getDeviceAddress();
+                configManager = manager;
             }
             parseBrainFile();
             parseFFTFile();
@@ -267,7 +278,7 @@ namespace Stu.UI
 
         private void bigBtn_Click(object sender, EventArgs e)
         {
-            BrainChart brain_chart = new BrainChart(this.outPath,false,false);
+            BrainChart brain_chart = new BrainChart(this.outPath, false, false, configManager);
             brain_chart.Show();
             brain_chart.bigStyle();
         }

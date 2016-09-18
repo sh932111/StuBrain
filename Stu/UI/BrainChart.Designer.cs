@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.label1 = new System.Windows.Forms.Label();
             this.rangeList = new System.Windows.Forms.ComboBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -44,6 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboMax = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.ageText = new System.Windows.Forms.Label();
+            this.nameText = new System.Windows.Forms.Label();
+            this.orderIDText = new System.Windows.Forms.Label();
+            this.labelMac = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,8 +73,8 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(2, 91);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(603, 293);
@@ -78,7 +83,7 @@
             // 
             // btnFFT
             // 
-            this.btnFFT.Location = new System.Drawing.Point(217, 9);
+            this.btnFFT.Location = new System.Drawing.Point(181, 17);
             this.btnFFT.Name = "btnFFT";
             this.btnFFT.Size = new System.Drawing.Size(75, 23);
             this.btnFFT.TabIndex = 16;
@@ -121,7 +126,7 @@
             // 
             // lastBtn
             // 
-            this.lastBtn.Location = new System.Drawing.Point(120, 9);
+            this.lastBtn.Location = new System.Drawing.Point(104, 17);
             this.lastBtn.Name = "lastBtn";
             this.lastBtn.Size = new System.Drawing.Size(75, 23);
             this.lastBtn.TabIndex = 24;
@@ -218,6 +223,56 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "腦波資訊";
             // 
+            // ageText
+            // 
+            this.ageText.AutoSize = true;
+            this.ageText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageText.Location = new System.Drawing.Point(428, 3);
+            this.ageText.Name = "ageText";
+            this.ageText.Size = new System.Drawing.Size(53, 16);
+            this.ageText.TabIndex = 36;
+            this.ageText.Text = "年紀：";
+            // 
+            // nameText
+            // 
+            this.nameText.AutoSize = true;
+            this.nameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameText.Location = new System.Drawing.Point(428, 23);
+            this.nameText.Name = "nameText";
+            this.nameText.Size = new System.Drawing.Size(68, 16);
+            this.nameText.TabIndex = 35;
+            this.nameText.Text = "受試者：";
+            // 
+            // orderIDText
+            // 
+            this.orderIDText.AutoSize = true;
+            this.orderIDText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderIDText.Location = new System.Drawing.Point(103, 2);
+            this.orderIDText.Name = "orderIDText";
+            this.orderIDText.Size = new System.Drawing.Size(66, 13);
+            this.orderIDText.TabIndex = 34;
+            this.orderIDText.Text = "資料夾ID：";
+            // 
+            // labelMac
+            // 
+            this.labelMac.AutoSize = true;
+            this.labelMac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMac.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelMac.Location = new System.Drawing.Point(317, 20);
+            this.labelMac.Name = "labelMac";
+            this.labelMac.Size = new System.Drawing.Size(0, 16);
+            this.labelMac.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(262, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 16);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Mac：";
+            // 
             // BrainChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +280,11 @@
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(607, 418);
+            this.Controls.Add(this.ageText);
+            this.Controls.Add(this.nameText);
+            this.Controls.Add(this.orderIDText);
+            this.Controls.Add(this.labelMac);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comboMax);
             this.Controls.Add(this.label5);
@@ -266,5 +326,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboMax;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label ageText;
+        private System.Windows.Forms.Label nameText;
+        private System.Windows.Forms.Label orderIDText;
+        private System.Windows.Forms.Label labelMac;
+        private System.Windows.Forms.Label label6;
     }
 }

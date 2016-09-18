@@ -45,6 +45,7 @@ namespace Stu.UI
             this.runPath = folder.createDeviceFolder(deviceManager.getDeviceAddress(), manager.getOrderID());
             ageText.Text = "年紀：" + manager.getYear();
             nameText.Text = "受試者：" + manager.getName();
+            orderIDText.Text = "資料夾ID：" + manager.getOrderID();
             this.brainReceiver = new BrainReceiver(deviceManager.getCOM(), brainReiverCallback, sectionReciver, abrainCallback);
             //this.chartDraw = new ChartDraw(runPath);
             //chartDraw.Show();
@@ -96,7 +97,7 @@ namespace Stu.UI
                     WriteFile writeFile = new WriteFile(this.runPath);
                     writeFile.clientSave(configManager);
                     this.Close();
-                    BrainChart view = new BrainChart(this.runPath,false,true);
+                    BrainChart view = new BrainChart(this.runPath,false,true , configManager);
                     view.Show();
                 }
                 else

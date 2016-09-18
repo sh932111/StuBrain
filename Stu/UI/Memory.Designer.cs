@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTimer = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.orderIDText = new System.Windows.Forms.Label();
             this.nameText = new System.Windows.Forms.Label();
             this.ageText = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -113,15 +113,15 @@
             this.labelTimer.TabIndex = 13;
             this.labelTimer.Text = "600";
             // 
-            // label4
+            // orderIDText
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(281, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "此為可移動視窗，如視線擋住可拖拉移動!";
+            this.orderIDText.AutoSize = true;
+            this.orderIDText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderIDText.Location = new System.Drawing.Point(3, 87);
+            this.orderIDText.Name = "orderIDText";
+            this.orderIDText.Size = new System.Drawing.Size(81, 16);
+            this.orderIDText.TabIndex = 15;
+            this.orderIDText.Text = "資料夾ID：";
             // 
             // nameText
             // 
@@ -151,7 +151,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.ageText);
             this.Controls.Add(this.nameText);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.orderIDText);
             this.Controls.Add(this.labelTimer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelTimer;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label orderIDText;
         private System.Windows.Forms.Label nameText;
         private System.Windows.Forms.Label ageText;
     }

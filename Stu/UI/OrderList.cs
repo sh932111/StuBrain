@@ -122,7 +122,7 @@ namespace Stu.UI
                 string path = manager.getString("path");
                 if (path.Length > 0)
                 {
-                    BrainChart view = new BrainChart(path, false,false);
+                    BrainChart view = new BrainChart(path, false,false , null);
                     view.Show();
                 }
                 else
