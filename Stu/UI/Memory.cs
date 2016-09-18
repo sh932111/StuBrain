@@ -43,6 +43,8 @@ namespace Stu.UI
             FloderUtils folder = new FloderUtils(manager.getPath());
             folder.createRoot();
             this.runPath = folder.createDeviceFolder(deviceManager.getDeviceAddress(), manager.getOrderID());
+            ageText.Text = "年紀：" + manager.getYear();
+            nameText.Text = "受試者：" + manager.getName();
             this.brainReceiver = new BrainReceiver(deviceManager.getCOM(), brainReiverCallback, sectionReciver, abrainCallback);
             //this.chartDraw = new ChartDraw(runPath);
             //chartDraw.Show();
