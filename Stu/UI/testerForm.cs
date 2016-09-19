@@ -22,6 +22,7 @@ namespace Stu.UI
             this.bluetoothDeviceManager = manager;
             this.outputPath = path;
             this.devIndex = index;
+            labelMac.Text = "MAC:" + manager.getDeviceAddress();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
